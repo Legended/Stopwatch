@@ -56,7 +56,9 @@ class Stopwatch:
             self.timer.config(text='0:00:00.000')
 
 
-if __name__ == '__main__':
+def main():
+    global root
+
     root = tk.Tk()
     root.config(padx=10, pady=10)
     root.title('Stopwatch')
@@ -70,3 +72,7 @@ if __name__ == '__main__':
     root.geometry('+%d+%d' % (x, y))
 
     root.mainloop()
+    
+
+if __name__ == '__main__':
+    main()
