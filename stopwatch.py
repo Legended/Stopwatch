@@ -42,6 +42,7 @@ class Stopwatch:
 
     def start(self, num):
         """Initiates the stopwatch."""
+        
         self.var = num
         t = str(timedelta(milliseconds=num))
         self.timer.config(text=(t[0:11] if '.' in t else f'{t}.000'))
@@ -49,6 +50,7 @@ class Stopwatch:
 
     def reset(self):
         """Resets the stopwatch and sets variables to default values."""
+        
         with suppress(ValueError):
             root.after_cancel(self.stopwatch)
             self.var = 0
